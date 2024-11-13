@@ -116,14 +116,14 @@ static void set_status_symbol(lv_obj_t *widget, struct output_status_state state
     switch (state.selected_endpoint.transport) {
     case ZMK_TRANSPORT_USB:
         if (current_selection_line_state != selection_line_state_usb) {
-            move_object_y(selection_line, lv_obj_get_y(bt) - 1, lv_obj_get_y(usb) - 1);
+            move_object_x(selection_line, lv_obj_get_y(bt) - 1, lv_obj_get_y(usb) - 1);
             change_size_object(selection_line, 18, 11);
             current_selection_line_state = selection_line_state_usb;
         }
         break;
     case ZMK_TRANSPORT_BLE:
         if (current_selection_line_state != selection_line_state_bt) {
-            move_object_xyselection_line, lv_obj_get_y(usb) - 1, lv_obj_get_y(bt) - 1);
+            move_object_x(selection_line, lv_obj_get_y(usb) - 1, lv_obj_get_y(bt) - 1);
             change_size_object(selection_line, 11, 18);
             current_selection_line_state = selection_line_state_bt;
         }
