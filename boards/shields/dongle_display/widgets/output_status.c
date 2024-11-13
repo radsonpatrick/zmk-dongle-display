@@ -76,7 +76,7 @@ static struct output_status_state get_state(const zmk_event_t *_eh) {
 }
 
 static void anim_x_cb(void * var, int32_t v) {
-    lv_obj_set_x(var, v);
+    lv_obj_set_y(var, v);
 }
 
 static void anim_size_cb(void * var, int32_t v) {
