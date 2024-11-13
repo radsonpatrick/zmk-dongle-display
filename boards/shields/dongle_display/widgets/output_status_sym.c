@@ -30,9 +30,9 @@ const lv_img_dsc_t sym_1 = {
   .header.cf = LV_IMG_CF_INDEXED_1BIT,
   .header.always_zero = 0,
   .header.reserved = 0,
-  .header.w = 5,
-  .header.h = 6,
-  .data_size = 14,
+  .header.w = 6,
+  .header.h = 5,
+  .data_size = 13,
   .data = sym_1_map,
 };
 
@@ -55,9 +55,9 @@ const lv_img_dsc_t sym_2 = {
   .header.cf = LV_IMG_CF_INDEXED_1BIT,
   .header.always_zero = 0,
   .header.reserved = 0,
-  .header.w = 5,
-  .header.h = 6,
-  .data_size = 14,
+  .header.w = 6,
+  .header.h = 5,
+  .data_size = 13,
   .data = sym_2_map,
 };
 
@@ -80,9 +80,9 @@ const lv_img_dsc_t sym_3 = {
   .header.cf = LV_IMG_CF_INDEXED_1BIT,
   .header.always_zero = 0,
   .header.reserved = 0,
-  .header.w = 5,
-  .header.h = 6,
-  .data_size = 14,
+  .header.w = 6,
+  .header.h = 5,
+  .data_size = 13,
   .data = sym_3_map,
 };
 
@@ -105,9 +105,9 @@ const lv_img_dsc_t sym_4 = {
   .header.cf = LV_IMG_CF_INDEXED_1BIT,
   .header.always_zero = 0,
   .header.reserved = 0,
-  .header.w = 5,
-  .header.h = 6,
-  .data_size = 14,
+  .header.w = 6,
+  .header.h = 5,
+  .data_size = 13,
   .data = sym_4_map,
 };
 
@@ -130,9 +130,9 @@ const lv_img_dsc_t sym_5 = {
   .header.cf = LV_IMG_CF_INDEXED_1BIT,
   .header.always_zero = 0,
   .header.reserved = 0,
-  .header.w = 5,
-  .header.h = 6,
-  .data_size = 14,
+  .header.w = 6,
+  .header.h = 5,
+  .data_size = 13,
   .data = sym_5_map,
 };
 
@@ -248,15 +248,15 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_LARGE_CONST LV_ATTRIBUTE_IMG_SYM_USB u
   0xf6, 0xf6, 0xf6, 0xff, 	/*Color of index 0*/
   0x10, 0x10, 0x10, 0xff, 	/*Color of index 1*/
 
-  0x0f, 0xfc, 
-  0xf8, 0x04, 
-  0x88, 0x04, 
-  0xa8, 0x04, 
-  0x88, 0x04, 
-  0xa8, 0x04, 
-  0x88, 0x04, 
-  0xf8, 0x04, 
-  0x0f, 0xfc, 
+  0xff, 0xc0, 
+  0x80, 0x7c, 
+  0x80, 0x44, 
+  0x80, 0x44, 
+  0x80, 0x44, 
+  0x80, 0x44, 
+  0x80, 0x44, 
+  0x80, 0x7c, 
+  0xff, 0xc0, 
 };
 
 const lv_img_dsc_t sym_usb = {
