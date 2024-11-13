@@ -45,22 +45,22 @@ static void draw_battery(lv_obj_t *canvas, uint8_t level, bool usb_present) {
     if (usb_present) {
         rect_fill_dsc.bg_opa = LV_OPA_TRANSP;
         rect_fill_dsc.border_color = lv_color_white();
-        rect_fill_dsc.border_width = 1;
+        rect_fill_dsc.border_width = 2;
     }
 
     lv_canvas_set_px(canvas, 0, 0, lv_color_white());
-    lv_canvas_set_px(canvas, 0, 4, lv_color_white());
+    lv_canvas_set_px(canvas, 0, 5, lv_color_white());
 
     if (level <= 10 || usb_present) {
-        lv_canvas_draw_rect(canvas, 4, 1, 5, 3, &rect_fill_dsc);
+        lv_canvas_draw_rect(canvas, 1, 1, 1, 3, &rect_fill_dsc);
     } else if (level <= 30) {
-        lv_canvas_draw_rect(canvas, 4, 1, 4, 3, &rect_fill_dsc);
+        lv_canvas_draw_rect(canvas, 1, 1, 2, 3, &rect_fill_dsc);
     } else if (level <= 50) {
-        lv_canvas_draw_rect(canvas, 4, 1, 3, 3, &rect_fill_dsc);
+        lv_canvas_draw_rect(canvas, 1, 1, 3, 3, &rect_fill_dsc);
     } else if (level <= 70) {
-        lv_canvas_draw_rect(canvas, 4, 1, 2, 3, &rect_fill_dsc);
+        lv_canvas_draw_rect(canvas, 1, 1, 4, 3, &rect_fill_dsc);
     } else if (level <= 90) {
-        lv_canvas_draw_rect(canvas, 4, 1, 1, 3, &rect_fill_dsc);
+        lv_canvas_draw_rect(canvas, 1, 1, 5, 3, &rect_fill_dsc);
     }
 }
 
