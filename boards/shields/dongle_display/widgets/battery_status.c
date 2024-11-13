@@ -34,7 +34,7 @@ struct battery_state {
     bool usb_present;
 };
     
-static lv_color_t battery_image_buffer[ZMK_SPLIT_BLE_PERIPHERAL_COUNT + SOURCE_OFFSET][8 * 5];
+static lv_color_t battery_image_buffer[ZMK_SPLIT_BLE_PERIPHERAL_COUNT + SOURCE_OFFSET][20 * 10];
 
 static void draw_battery(lv_obj_t *canvas, uint8_t level, bool usb_present) {
     lv_canvas_fill_bg(canvas, lv_color_black(), LV_OPA_COVER);
@@ -48,19 +48,19 @@ static void draw_battery(lv_obj_t *canvas, uint8_t level, bool usb_present) {
         rect_fill_dsc.border_width = 1;
     }
 
-    lv_canvas_set_px(canvas, 0, 0, lv_color_white());
-    lv_canvas_set_px(canvas, 4, 0, lv_color_white());
+    //lv_canvas_set_px(canvas, 0, 0, lv_color_white());
+    //lv_canvas_set_px(canvas, 4, 0, lv_color_white());
 
     if (level <= 10 || usb_present) {
-        lv_canvas_draw_rect(canvas, 1, 2, 5, 3, &rect_fill_dsc);
+        lv_canvas_draw_rect(canvas, 1, 2, 18, 8, &rect_fill_dsc);
     } else if (level <= 30) {
-        lv_canvas_draw_rect(canvas, 1, 2, 4, 3, &rect_fill_dsc);
+        lv_canvas_draw_rect(canvas, 1, 2, 13, 8, &rect_fill_dsc);
     } else if (level <= 50) {
-        lv_canvas_draw_rect(canvas, 1, 2, 3, 3, &rect_fill_dsc);
+        lv_canvas_draw_rect(canvas, 1, 2, 9, 8, &rect_fill_dsc);
     } else if (level <= 70) {
-        lv_canvas_draw_rect(canvas, 1, 2, 2, 3, &rect_fill_dsc);
+        lv_canvas_draw_rect(canvas, 1, 2, 6, 8, &rect_fill_dsc);
     } else if (level <= 90) {
-        lv_canvas_draw_rect(canvas, 1, 2, 1, 3, &rect_fill_dsc);
+        lv_canvas_draw_rect(canvas, 1, 2, 1, 8, &rect_fill_dsc);
     }
 }
 
