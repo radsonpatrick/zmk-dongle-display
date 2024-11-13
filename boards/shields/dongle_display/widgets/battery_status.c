@@ -45,11 +45,11 @@ static void draw_battery(lv_obj_t *canvas, uint8_t level, bool usb_present) {
     if (usb_present) {
         rect_fill_dsc.bg_opa = LV_OPA_TRANSP;
         rect_fill_dsc.border_color = lv_color_white();
-        rect_fill_dsc.border_width = 4;
+        rect_fill_dsc.border_width = 3;
     }
 
-    lv_canvas_set_px(canvas, 2, 0, lv_color_white());
-    lv_canvas_set_px(canvas, 3, 0, lv_color_white());
+    // lv_canvas_set_px(canvas, 2, 0, lv_color_white());
+    // lv_canvas_set_px(canvas, 3, 0, lv_color_white());
     lv_canvas_draw_rect(canvas, 1, 1, 18, 8, &rect_fill_dsc);
     // if (level <= 10 || usb_present) {
     //     lv_canvas_draw_rect(canvas, 1, 1, 1, 3, &rect_fill_dsc);
