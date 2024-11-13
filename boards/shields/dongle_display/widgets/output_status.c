@@ -182,10 +182,10 @@ int zmk_widget_output_status_init(struct zmk_widget_output_status *widget, lv_ob
     
 
     lv_obj_t *bt_number = lv_img_create(widget->obj);
-    lv_obj_align_to(bt_number, bt, LV_ALIGN_OUT_RIGHT_TOP, 2, 7);
+    lv_obj_align_to(bt_number, bt, LV_ALIGN_OUT_BOTTOM_RIGHT, 7, 2);
 
     lv_obj_t *bt_status = lv_img_create(widget->obj);
-    lv_obj_align_to(bt_status, bt, LV_ALIGN_OUT_RIGHT_TOP, 2, 1);
+    lv_obj_align_to(bt_status, bt, LV_ALIGN_OUT_BOTTOM_RIGHT, 1, 2);
     
     static lv_style_t style_line;
     lv_style_init(&style_line);
