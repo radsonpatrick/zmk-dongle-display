@@ -162,7 +162,7 @@ int zmk_widget_dongle_battery_status_init(struct zmk_widget_dongle_battery_statu
         //lv_obj_align(battery_label, LV_ALIGN_TOP_RIGHT, -15, i * 20);
 
         lv_obj_add_flag(image_canvas, LV_OBJ_FLAG_HIDDEN);
-        //lv_obj_add_flag(battery_label, LV_OBJ_FLAG_HIDDEN);
+        lv_obj_add_flag(battery_label, LV_OBJ_FLAG_HIDDEN);
     }
 
     sys_slist_append(&widgets, &widget->node);
