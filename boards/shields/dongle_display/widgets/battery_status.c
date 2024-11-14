@@ -77,10 +77,10 @@ static void set_battery_symbol(lv_obj_t *widget, struct battery_state state) {
     
     if (state.level > 0 || state.usb_present) {
         lv_obj_clear_flag(symbol, LV_OBJ_FLAG_HIDDEN);
-        //lv_obj_clear_flag(label, LV_OBJ_FLAG_HIDDEN);
+        lv_obj_clear_flag(label, LV_OBJ_FLAG_HIDDEN);
     } else {
         lv_obj_add_flag(symbol, LV_OBJ_FLAG_HIDDEN);
-        //lv_obj_add_flag(label, LV_OBJ_FLAG_HIDDEN);
+        lv_obj_add_flag(label, LV_OBJ_FLAG_HIDDEN);
     }
 }
 
