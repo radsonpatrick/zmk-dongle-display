@@ -154,7 +154,7 @@ int zmk_widget_dongle_battery_status_init(struct zmk_widget_dongle_battery_statu
     
     for (int i = ZMK_SPLIT_BLE_PERIPHERAL_COUNT + SOURCE_OFFSET - 1; i >= 0; i--) {
         lv_obj_t *image_canvas = lv_canvas_create(widget->obj);
-        //lv_obj_t *battery_label = lv_label_create(widget->obj);
+        lv_obj_t *battery_label = lv_label_create(widget->obj);
 
         lv_canvas_set_buffer(image_canvas, battery_image_buffer[i], 20, 10, LV_IMG_CF_TRUE_COLOR);
 
