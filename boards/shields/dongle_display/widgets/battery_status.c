@@ -50,6 +50,8 @@ static void draw_battery(lv_obj_t *canvas, uint8_t level, bool usb_present) {
 
     lv_canvas_set_px(canvas, 18, 2, lv_color_white());
     lv_canvas_set_px(canvas, 18, 3, lv_color_white());
+    lv_canvas_set_px(canvas, 19, 2, lv_color_white());
+    lv_canvas_set_px(canvas, 19, 3, lv_color_white());
     lv_canvas_set_px(canvas, 18, 8, lv_color_white());
     lv_canvas_set_px(canvas, 18, 9, lv_color_white());
     lv_canvas_set_px(canvas, 19, 8, lv_color_white());
