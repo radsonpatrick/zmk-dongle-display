@@ -86,7 +86,7 @@ static void set_battery_symbol(lv_obj_t *widget, struct battery_state state) {
     }
     LOG_DBG("source: %d, level: %d, usb: %d", state.source, state.level, state.usb_present);
     lv_obj_t *symbol = lv_obj_get_child(widget, state.source * 2);
-    lv_obj_t *label = lv_obj_get_child(widget, state.source * 2 + 1);
+    //lv_obj_t *label = lv_obj_get_child(widget, state.source * 2 + 1);
 
     draw_battery(symbol, state.level, state.usb_present);
     //lv_label_set_text_fmt(label, "%4u%%", state.level);
