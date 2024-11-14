@@ -61,14 +61,22 @@ static void draw_battery(lv_obj_t *canvas, uint8_t level, bool usb_present) {
 
     if (level <= 10 || usb_present) {
         lv_canvas_draw_rect(canvas, 1, 1, 16, 8, &rect_fill_dsc);
+    } else if (level <= 20) {
+        lv_canvas_draw_rect(canvas, 3, 1, 14, 8, &rect_fill_dsc);
     } else if (level <= 30) {
-        lv_canvas_draw_rect(canvas, 6, 1, 9, 8, &rect_fill_dsc);
+        lv_canvas_draw_rect(canvas, 6, 1, 11, 8, &rect_fill_dsc);
+    } else if (level <= 40) {
+        lv_canvas_draw_rect(canvas, 8, 1, 9, 8, &rect_fill_dsc);
     } else if (level <= 50) {
-        lv_canvas_draw_rect(canvas, 9, 1, 8, 8, &rect_fill_dsc);
+        lv_canvas_draw_rect(canvas, 10, 1, 7, 8, &rect_fill_dsc);
+    } else if (level <= 60) {
+        lv_canvas_draw_rect(canvas, 12, 1, 5, 8, &rect_fill_dsc);
     } else if (level <= 70) {
-        lv_canvas_draw_rect(canvas, 10, 1, 5, 8, &rect_fill_dsc);
+        lv_canvas_draw_rect(canvas, 14, 1, 3, 8, &rect_fill_dsc);
+    } else if (level <= 80) {
+        lv_canvas_draw_rect(canvas, 15, 1, 2, 8, &rect_fill_dsc);
     } else if (level <= 90) {
-        lv_canvas_draw_rect(canvas, 14, 1, 1, 8, &rect_fill_dsc);
+        lv_canvas_draw_rect(canvas, 16, 1, 1, 8, &rect_fill_dsc);
     }
 }
 
