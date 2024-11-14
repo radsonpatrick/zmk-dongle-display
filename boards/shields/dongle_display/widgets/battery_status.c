@@ -62,13 +62,13 @@ static void draw_battery(lv_obj_t *canvas, uint8_t level, bool usb_present) {
     if (level <= 10 || usb_present) {
         lv_canvas_draw_rect(canvas, 1, 1, 16, 8, &rect_fill_dsc);
     } else if (level <= 30) {
-        lv_canvas_draw_rect(canvas, 1, 1, 16, 8, &rect_fill_dsc);
+        lv_canvas_draw_rect(canvas, 1, 1, 10, 8, &rect_fill_dsc);
     } else if (level <= 50) {
-        lv_canvas_draw_rect(canvas, 1, 1, 16, 8, &rect_fill_dsc);
+        lv_canvas_draw_rect(canvas, 1, 1, 8, 8, &rect_fill_dsc);
     } else if (level <= 70) {
-        lv_canvas_draw_rect(canvas, 1, 1, 16, 8, &rect_fill_dsc);
+        lv_canvas_draw_rect(canvas, 1, 1, 6, 8, &rect_fill_dsc);
     } else if (level <= 90) {
-        lv_canvas_draw_rect(canvas, 1, 1, 16, 8, &rect_fill_dsc);
+        lv_canvas_draw_rect(canvas, 1, 1, 2, 8, &rect_fill_dsc);
     }
 }
 
